@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="shortcut icon" href="https://imagensemoldes.com.br/wp-content/uploads/2020/08/Desenho-Tecnologia-PNG.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/estilo.css">
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="image-logo">
+
+            <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/08/Ilustra%C3%A7%C3%A3o-Tecnologia-PNG-1024x881.png" alt="">
+
+        </div>
+
+        <h1>Ficha de Pedido</h1>
+        
+        <form class="form-pedido" action="">
+
+            <label for="">Cliente</label>
+            <input class="textbox" type="text" name="" id="txcliente" placeholder="Dados do cliente" size="100" min="1" max="100">
+
+            <label for="">Pedido</label>
+            <input class="textbox" type="number" name="" id="txpedido" placeholder="Pedido" size="20" min=1 max="9">
+            
+            <label for="">Data</label>
+            <input class="textbox" type="date" name="" id="txdata" placeholder="Data do Pedido" size="30">            
+
+            <label for="">Preço</label>
+            <input class="textbox" type="text" name="" id="txpreço" placeholder="Preço" size="100">
+
+
+        </form>
+
+        <table id="table-product">
+
+            <caption>Tabela de Produtos</caption>
+
+            <tr>
+
+                <td colspan="5" class="cor-cabecalho">Produto</td>
+                <td colspan="6" class="cor-cabecalho">Quantidade</td>
+                <td colspan="3" class="cor-cabecalho">Valor</td>
+
+            </tr>
+
+            <tr>
+
+                <td colspan="5">produto</td>
+                <td colspan="6">valor</td>
+                <td colspan="3">preço</td>
+
+            </tr>
+
+        </table>
+
+        <div id="btn-01">
+
+            <input type="button" value="Carregando XML">
+            <input type="button" value="Gerar arquivo JSON">
+            <input type="button" value="Próximo registro" onclick="validar_campos()">
+
+        </div>        
+
+    </div>
+
+    <script>
+
+        function validar_campos(){
+
+            let cliente,pedido,dt_pedido,preço;
+
+            cliente=document.querySelector("#txcliente").value;
+            pedido=document.querySelector("#txpedido").value;
+            dt_pedido=document.querySelector("#txdata").value;
+            preço=document.querySelector("#txpreço").value;
+            
+            if(cliente=="" || pedido=="" || dt_pedido=="" || preço==""){
+
+                window.alert("Favor preencher todos os campos");
+
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
